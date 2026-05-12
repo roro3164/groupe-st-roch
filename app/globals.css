@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@source "../**/*.{js,ts,jsx,tsx}";
+
+:root {
+  --gsr-ink: #0f1412;
+  --gsr-muted: #3d4a44;
+  --gsr-cream: #f6f3ec;
+  --gsr-deli: #1b5840;
+  --gsr-deli-dark: #134832;
+  --gsr-nina-gold: #c9a227;
+  /* Jaune / or boutons Niña (site ni-a-bonita) */
+  --gsr-nina-yellow: #fcc908;
+  --gsr-nina-yellow-mid: #fac608;
+  /* Vert marque Niña Bonita (aligné sur apps/nina-bonita) */
+  --gsr-nina-green: #173d14;
+  --gsr-nina-green-light: #1f4f1a;
+  --gsr-nina-green-deep: #123010;
+  --gsr-nina-deep: #1a1208;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--gsr-cream);
+  color: var(--gsr-ink);
+}
+
+/* Galerie colonnes (identique à Deli's Corner) : défilement vertical en boucle. */
+@keyframes deli-col-scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes deli-col-scroll-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes deli-col-up-once {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes deli-col-down-once {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.deli-col-animate-up {
+  animation: deli-col-scroll-up linear infinite;
+  will-change: transform;
+}
+
+.deli-col-animate-down {
+  animation: deli-col-scroll-down linear infinite;
+  will-change: transform;
+}
+
+.deli-col-up-once {
+  animation: deli-col-up-once linear 1 forwards;
+}
+
+.deli-col-down-once {
+  animation: deli-col-down-once linear 1 forwards;
+}
+
+.deli-col-static {
+  animation: none;
+}
+
+.deli-col-track.deli-col-paused {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deli-col-animate-up,
+  .deli-col-animate-down,
+  .deli-col-up-once,
+  .deli-col-down-once {
+    animation: none;
+    transform: none;
+  }
+}
