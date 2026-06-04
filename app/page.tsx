@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { LeCoinGalleryColumns } from "@/components/le-coin-gallery-columns";
 import {
   GsrFooter,
@@ -459,6 +460,28 @@ export default function LeCoinSaintRochPage() {
           </a>
           , Montpellier.
         </p>
+        <p className="mt-3">
+          <Link href="/mentions-legales" className="underline-offset-2 hover:text-white hover:underline">
+            Mentions légales
+          </Link>
+        </p>
+        <div className="mt-6 flex flex-col items-center justify-center gap-2 border-t border-white/12 pt-5">
+          <span className="block text-white/55">Réalisation —</span>
+          <a
+            href="https://romaindesigncode.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center justify-center opacity-90 transition-opacity hover:opacity-100"
+          >
+            <Image
+              src="/logo-romain-design-code.webp"
+              alt="Romain Design Code"
+              width={140}
+              height={41}
+              className="h-7 w-auto sm:h-8"
+            />
+          </a>
+        </div>
       </GsrFooter>
     </div>
     </LeCoinMotionShell>
