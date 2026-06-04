@@ -12,13 +12,13 @@ function pad2(n: number) {
 /** Numéros `delis-galerie-NN` à exclure du flux galerie. */
 const EXCLUDED_DELIS_GALLERY_NUMBERS = new Set([2, 31]);
 
-/** Visuels Deli's — fichiers `public/images/external/gallery/delis-galerie-*.png`. */
+/** Visuels Deli's — fichiers `public/images/external/gallery/delis-galerie-*.webp`. */
 const deliGalleryImages: GsrColumnsGalleryImage[] = Array.from({ length: 34 }, (_, i) => {
   const n = i + 1;
   if (EXCLUDED_DELIS_GALLERY_NUMBERS.has(n)) return [];
   return [
     {
-      src: `/images/external/gallery/delis-galerie-${pad2(n)}.png`,
+      src: `/images/external/gallery/delis-galerie-${pad2(n)}.webp`,
       alt: `Deli's Corner — galerie, photo ${n}`,
     },
   ];
@@ -28,7 +28,7 @@ const deliGalleryImages: GsrColumnsGalleryImage[] = Array.from({ length: 34 }, (
 const ninaGalleryImages: GsrColumnsGalleryImage[] = Array.from({ length: 21 }, (_, i) => {
   const n = i + 1;
   return {
-    src: `/images/external/gallery/nina-galerie-${pad2(n)}.jpeg`,
+    src: `/images/external/gallery/nina-galerie-${pad2(n)}.webp`,
     alt: `Niña Bonita — galerie, photo ${n}`,
   };
 });

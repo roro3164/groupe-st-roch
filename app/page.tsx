@@ -17,12 +17,12 @@ import { cn } from "@/lib/cn";
 import { getDelisSiteUrl, getNinaSiteUrl } from "@/lib/site-urls";
 
 const HERO_IMAGE =
-  "/images/ChatGPT%20Image%209%20mai%202026%2C%2013_59_17%201.png";
+  "/images/ChatGPT%20Image%209%20mai%202026%2C%2013_59_17%201.webp";
 
-const DELI_RESTAURANT_IMG = "/images/external/delis/hero-main.png";
+const DELI_RESTAURANT_IMG = "/images/external/delis/hero-main.webp";
 /** Fond de la grande zone hero (titre + carte duo). */
-const HERO_SECTION_BG = "/images/heroplace.png";
-const NINA_RESTAURANT_IMG = "/nina.jpeg";
+const HERO_SECTION_BG = "/images/heroplace.webp";
+const NINA_RESTAURANT_IMG = "/nina.webp";
 
 function SectionTitle({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
